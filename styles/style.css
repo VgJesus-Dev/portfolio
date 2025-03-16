@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,600;1,600&display=swap');
+
+*{ /* asterisco é um seletor universal, que se aplica a todos os elementos */
+    margin: 0;
+    padding: 0;
+}
+
+:root{ /* seletor raiz, onde declaramos as variáveis globais, caso futuramente querer mudar as cores do portfolio*/
+    --cor-primaria: #000000; 
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #22D4FD;
+    --cor-hover: #272727;
+
+    --fonte-primaria: "Krona One", serif;
+    --fonte-secundaria: "Montserrat", sans-serif;
+}
+
+body{
+    box-sizing: border-box;    /* faz com que a largura e altura do elemento inclua o padding e a borda */
+    background-color:var(--cor-primaria); /* Aplicando variaveis globais */
+    color: var(--cor-secundaria);
+}
+
+.cabecalho{
+    padding: 2% 0% 0% 15%; /*Usamos porcentagem para que o padding se ajuste conforme a tela, ao invés de deixar px fixel*/
+}
+
+.cabecalho__menu{
+    display: flex; 
+    gap: 80px;
+}
+
+.cabecalho__menu__link {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 5px; /* Coloca o padding direto no link */
+    border-radius: 10px; /* Mantém o mesmo formato desde o início */
+    transition: background-color 0.3s ease; /* Animação suave */
+}
+
+.cabecalho__menu__link:hover {
+    background-color: var(--cor-hover);
+}
+
+.apresentacao{
+    margin: 5% 15%;
+    display: flex;  /* alinhamento dos elementos em linha */
+    align-items: center; /* alinhamento dos elementos no centro */
+    justify-content: space-between; /* espaçamento entre os elementos em todo o corpo */
+    gap: 40px; 
+}
+
+.apresentacao__conteudo{
+    width: 50%;
+    display: flex;
+    flex-direction: column; /* alinhamento dos elementos em coluna */
+    gap: 40px; /* espaçamento entre os elementos */
+}
+
+.apresentacao__conteudo__titulo{
+    font-size: 2.25rem; /*rem para deixar responsivo*/
+    font-family: var(--fonte-primaria);
+}
+
+.titulo-destaque{
+    color: var(--cor-terciaria);
+}
+
+
+.apresentacao__conteudo__texto{
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+}
+
+
+.apresentacao__links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao__links_subtitulo{
+    font-size: 1.5rem;
+    font-family: var(--fonte-primaria);
+    font-weight: 400px;
+}
+
+.apresentacao__links__navegacao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-terciaria); /* borda */
+    width: 50%;  /* largura */
+    text-align: center; /* alinhamento do texto */
+    font-size: 1.5rem; /* tamanho da fonte */
+    font-family: var(--fonte-secundaria); /* fonte */
+    font-weight: 600px; /* peso da fonte */
+    text-decoration: none; /* remove o sublinhado */
+    color: var(--cor-secundaria); /* cor do texto */
+    border-radius: 14px; /* arredondamento das bordas */
+    padding: 21.5px 0; /* espaçamento interno */
+}
+  
+.apresentacao__links__navegacao:hover{
+    background-color: var(--cor-hover);
+}
+
+.apresentacao__imagem{
+    width: 40%;
+    border-radius: 20px;
+}
+
+.rodape{
+    background-color: var(--cor-terciaria);
+    color: var(--cor-primaria);
+    padding: 1.5rem;
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400px;
+}
+
+.apresentacao__conteudo_projetos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    }
+    
+.div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.apresentacao__conteudo__projetos_link{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    flex-direction: column;
+    gap: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    text-align: justify;
+    
+}
+
+
+.imagens_projetos {
+    width: 600px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 14px;
+    transition: transform 0.3s ease; 
+}
+
+.imagens_projetos:hover {
+    transform: scale(1.1); 
+}
+
+
+
+@media (max-width: 1200px){ 
+    
+    .cabecalho{
+        padding: 10%;
+    }
+
+    .cabecalho__menu{
+        justify-content: center;
+    }
+
+    .apresentacao{
+        flex-direction: column-reverse; /* inverte a ordem dos elementos */
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo{
+        width: 100%;
+    }
+
+    .apresentacao__conteudo__projetos_imagens{
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .apresentacao__conteudo__projetos_link{
+        width: auto;
+        gap: 20px;
+    }
+
+    .apresentacao__conteudo__titulo{
+        display: flex;
+        justify-content: center;
+    }
+    .imagens_projetos{
+        width: 100%;
+        
+    }
+}   
