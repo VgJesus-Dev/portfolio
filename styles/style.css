@@ -160,17 +160,21 @@ body{
 
 
 
-.imagens_projetos{
+.imagens_projetos {
     width: 600px;
     height: 300px;
     object-fit: cover;
     border-radius: 14px;
-    
+    transition: transform 0.3s ease; 
+}
+
+.imagens_projetos:hover {
+    transform: scale(1.1); 
 }
 
 
-@media (max-width: 1200px){ /* media query para telas de até 1200px, resposividade*/
-    
+
+@media (max-width: 1200px){
     .cabecalho{
         padding: 10%;
     }
